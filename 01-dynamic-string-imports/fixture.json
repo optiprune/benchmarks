@@ -1,0 +1,26 @@
+{
+  "id": 1,
+  "slug": "dynamic-string-imports",
+  "title": "Dynamic String Imports",
+  "category": "dynamic-imports",
+  "entry": "src/index.ts",
+  "proves": "Resolves locale path patterns and keeps only the reachable locale set.",
+  "expected": {
+    "live": [
+      "src/index.ts",
+      "src/locales/fr.ts"
+    ],
+    "dead": [
+      "src/locales/unused.ts"
+    ],
+    "diagnostics": [
+      "dynamic-import-pattern:./locales/*.ts"
+    ]
+  },
+  "files": [
+    "src/index.ts",
+    "src/locales/unused.ts",
+    "src/locales/fr.ts",
+    "package.json"
+  ]
+}

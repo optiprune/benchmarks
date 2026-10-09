@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "slug": "turborepo-workspace-boundaries",
+  "title": "Turborepo Workspace Boundaries",
+  "category": "workspace-boundaries",
+  "entry": "packages/app/src/index.ts",
+  "proves": "Resolves package-name imports to workspace package sources without a full build.",
+  "expected": {
+    "live": [
+      "packages/app/src/index.ts",
+      "packages/ui/src/index.ts"
+    ],
+    "dead": [],
+    "diagnostics": [
+      "workspace-link:@trials/ui"
+    ]
+  },
+  "files": [
+    "package.json",
+    "packages/app/package.json",
+    "packages/app/src/index.ts",
+    "packages/ui/package.json",
+    "packages/ui/src/index.ts",
+    "turbo.json"
+  ]
+}

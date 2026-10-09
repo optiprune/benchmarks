@@ -1,0 +1,24 @@
+{
+  "id": 4,
+  "slug": "phantom-dependencies",
+  "title": "Phantom Dependencies",
+  "category": "dependency-declarations",
+  "entry": "src/index.ts",
+  "proves": "Reports a direct import that is available only transitively and absent from the declaring package manifest.",
+  "expected": {
+    "live": [
+      "src/index.ts",
+      "node_modules/some-framework/package.json"
+    ],
+    "dead": [],
+    "diagnostics": [
+      "phantom-dependency:lodash-es",
+      "declared-direct-import:false"
+    ]
+  },
+  "files": [
+    "node_modules/some-framework/package.json",
+    "package.json",
+    "src/index.ts"
+  ]
+}

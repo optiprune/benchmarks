@@ -1,0 +1,28 @@
+{
+  "id": 3,
+  "slug": "circular-dependency-dead-island",
+  "title": "Circular Dependency Dead Islands",
+  "category": "strongly-connected-components",
+  "entry": "src/index.ts",
+  "proves": "Finds an isolated A↔B strongly connected component instead of marking it live merely because it is cyclic.",
+  "expected": {
+    "live": [
+      "src/index.ts",
+      "src/live.ts"
+    ],
+    "dead": [
+      "src/a.ts",
+      "src/b.ts"
+    ],
+    "diagnostics": [
+      "isolated-scc:#0",
+      "cycle:src/a.ts<->src/b.ts"
+    ]
+  },
+  "files": [
+    "src/a.ts",
+    "src/b.ts",
+    "src/index.ts",
+    "src/live.ts"
+  ]
+}

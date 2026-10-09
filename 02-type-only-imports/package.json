@@ -1,0 +1,5 @@
+{
+  "name": "type-only-fixture",
+  "dependencies": {},
+  "devDependencies": { "typescript": "^5.0.0" }
+}

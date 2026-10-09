@@ -1,0 +1,27 @@
+{
+  "id": 8,
+  "slug": "worker-entrypoints",
+  "title": "Worker Threads & Service Workers",
+  "category": "worker-entrypoints",
+  "entry": "src/index.ts",
+  "proves": "Recognizes standard Worker URL constructors as source graph entry points.",
+  "expected": {
+    "live": [
+      "src/index.ts",
+      "src/worker.js"
+    ],
+    "dead": [
+      "src/sw.ts",
+      "src/unused-worker.js"
+    ],
+    "diagnostics": [
+      "worker-url:./worker.js"
+    ]
+  },
+  "files": [
+    "src/index.ts",
+    "src/sw.ts",
+    "src/unused-worker.js",
+    "src/worker.js"
+  ]
+}

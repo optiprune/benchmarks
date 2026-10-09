@@ -1,0 +1,27 @@
+{
+  "id": 7,
+  "slug": "class-member-reachability",
+  "title": "Class Member & Method Reachability",
+  "category": "class-reachability",
+  "entry": "src/index.ts",
+  "proves": "Analyzes member-level reachability and flags unused private methods and never-instantiated classes.",
+  "expected": {
+    "live": [
+      "src/index.ts",
+      "class:Calculator",
+      "method:Calculator.add"
+    ],
+    "dead": [
+      "method:Calculator.normalize",
+      "class:NeverUsed",
+      "method:NeverUsed.run"
+    ],
+    "diagnostics": [
+      "member-reachability"
+    ]
+  },
+  "files": [
+    "src/calculator.ts",
+    "src/index.ts"
+  ]
+}

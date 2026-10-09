@@ -1,0 +1,24 @@
+{
+  "id": 2,
+  "slug": "type-only-imports",
+  "title": "TypeScript Type-Only Imports",
+  "category": "typescript-type-graph",
+  "entry": "src/index.ts",
+  "proves": "Separates type reachability from runtime package dependency reachability.",
+  "expected": {
+    "live": [
+      "src/index.ts",
+      "src/types.ts"
+    ],
+    "dead": [],
+    "diagnostics": [
+      "edge:type-only-import",
+      "runtime-dependency:none"
+    ]
+  },
+  "files": [
+    "package.json",
+    "src/index.ts",
+    "src/types.ts"
+  ]
+}

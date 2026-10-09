@@ -1,0 +1,25 @@
+{
+  "id": 6,
+  "slug": "jsx-pragma-runtime",
+  "title": "JSX/TSX Pragma & Runtime Injection",
+  "category": "jsx-runtime",
+  "entry": "src/index.tsx",
+  "proves": "Recognizes jsxImportSource and automatic runtime package requirements.",
+  "expected": {
+    "live": [
+      "package.json",
+      "src/index.tsx",
+      "src/runtime.ts"
+    ],
+    "dead": [],
+    "diagnostics": [
+      "jsxImportSource:@emotion/react",
+      "runtime:@emotion/react/jsx-runtime"
+    ]
+  },
+  "files": [
+    "package.json",
+    "src/index.tsx",
+    "src/runtime.ts"
+  ]
+}
